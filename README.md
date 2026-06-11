@@ -5,6 +5,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
+npm install
 npm run dev
 # or
 yarn dev
@@ -15,6 +16,22 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Contact Form Email
+
+The contact form posts to `app/api/contact/route.ts` and sends inquiry emails through AWS SES.
+
+Create a local `.env.local` file with:
+
+```bash
+AWS_REGION=us-east-1
+AWS_ACCESS_KEY_ID=your_iam_access_key
+AWS_SECRET_ACCESS_KEY=your_iam_secret_key
+CONTACT_FORM_TO_EMAIL=AndrewRapier@beatitat.com
+CONTACT_FORM_FROM_EMAIL=website@55southcontractors.com
+```
+
+`CONTACT_FORM_TO_EMAIL` controls the receiving inbox. `CONTACT_FORM_FROM_EMAIL` must be an address on the verified SES domain, such as `website@55southcontractors.com`.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
