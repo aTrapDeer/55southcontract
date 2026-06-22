@@ -12,7 +12,7 @@ const services = [
   },
   {
     name: "Flooring",
-    description: "Transform your space with beautiful, durable flooring. Hardwood, laminate, tile, and luxury vinyl.",
+    description: "Transform your St. Louis home with beautiful, durable flooring installed by local professionals. Choose hardwood, laminate, tile, or luxury vinyl.",
     image: "/img/flooring.jpg",
     features: ["Hardwood & Laminate", "Tile Installation", "Subfloor Repair"],
   },
@@ -185,7 +185,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/img/55-sign-andBackdrop.avif"
-            alt="55 South Contractors"
+            alt="55 South Contractors roofing and flooring team in St. Louis"
             fill
             className="object-cover scale-105"
             priority
@@ -201,15 +201,15 @@ export default function Home() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.1] tracking-tight">
-            <span className="text-white">Quality Home</span>
+            <span className="text-white">St. Louis Roofing &</span>
             <br />
-            <span className="bg-linear-to-r from-orange-400 to-orange-500 bg-clip-text text-transparent">Improvements</span>
+            <span className="bg-linear-to-r from-orange-400 to-orange-500 bg-clip-text text-transparent">Flooring Contractors</span>
             <br />
             <span className="text-white">You Can Trust</span>
           </h1>
 
           <p className="text-lg sm:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            From roofing to flooring, decks to painting — we deliver exceptional craftsmanship with honest pricing and reliable service.
+            Local St. Louis contractors for flooring installation, roof repair and replacement, decks, gutters, fences, and painting—with honest pricing and reliable service.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -275,9 +275,9 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <span className="text-orange-500 font-semibold text-sm tracking-wider uppercase">What We Do</span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mt-3 mb-4">Our Services</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mt-3 mb-4">Roofing, Flooring & Contracting Services in St. Louis</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Comprehensive home improvement solutions delivered with expertise and care.
+              Complete interior and exterior home improvement services for St. Louis homeowners, delivered with expertise and care.
             </p>
           </div>
 
@@ -291,7 +291,7 @@ export default function Home() {
                   <div className="relative h-48 overflow-hidden">
                     <Image
                       src={service.image}
-                      alt={service.name}
+                      alt={`${service.name} contractor services in St. Louis, Missouri`}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
