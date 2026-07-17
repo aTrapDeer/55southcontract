@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import BeforeAfterSlider from "./components/BeforeAfterSlider";
 
 const services = [
   {
@@ -39,6 +40,25 @@ const services = [
     description: "Refresh your home inside and out with our professional painting services.",
     image: "/img/painting.jpg",
     features: ["Interior & Exterior", "Cabinet Refinishing", "Staining & Sealing"],
+  },
+];
+
+const beforeAfterProjects = [
+  {
+    label: "Exterior Siding",
+    folder: "Building-Side",
+  },
+  {
+    label: "Roof Replacement",
+    folder: "Roof",
+  },
+  {
+    label: "Framing & Drywall",
+    folder: "Wall-Constructing",
+  },
+  {
+    label: "Yard Cleanup",
+    folder: "Yard-Clean",
   },
 ];
 
@@ -322,8 +342,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Before & After Section */}
       <section className="py-20 sm:py-28 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <span className="text-orange-500 font-semibold text-sm tracking-wider uppercase">Our Work</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mt-3 mb-4">See the Transformation</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Drag the slider to compare before and after on real St. Louis projects.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {beforeAfterProjects.map((project) => (
+              <BeforeAfterSlider
+                key={project.folder}
+                before={`/img/jobs-done/${project.folder}/before.webp`}
+                after={`/img/jobs-done/${project.folder}/after.webp`}
+                label={project.label}
+                alt={`${project.label} project by 55 South Contractors in St. Louis`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 sm:py-28 bg-slate-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <span className="text-orange-500 font-semibold text-sm tracking-wider uppercase">How It Works</span>
